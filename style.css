@@ -1,0 +1,57 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to top, #fbc2eb8f 0%, #a6c0eea6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wave-wrap {
+  width: 700px;
+  height: 700px;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow:1px 3px 33px 9px #bfa4da98;
+}
+.wave-wrap .wave {
+  width: 950px;
+  height: 900px;
+  border-radius: 44%;
+  background: radial-gradient(circle, rgb(177, 148, 223) 0%, rgb(177, 148, 223) 30%, rgba(107, 201, 255, 0.8) 100%);
+  position: absolute;
+}
+.wave-wrap div:first-child {
+  animation: waving 7s infinite linear;
+  top: 400px;
+  left: -120px;
+  opacity: 0.9;
+}
+.wave-wrap div:last-child {
+  animation: waving 8s infinite linear;
+  top: 395px;
+  left: -100px;
+  opacity: 0.3;
+}
+
+.wave-wrap::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 150px;
+  left: 165px;
+  background: rgb(240, 224, 138);
+  box-shadow: 1px 3px 33px 2px #fae292, 1px 3px 33px 9px #FFFFFF;
+}
+
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
